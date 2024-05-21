@@ -2,12 +2,13 @@ import "./UserItem.css";
 import PropTypes from "prop-types";
 import Avatar from "../../shared/components/UIElements/Avatar";
 import { Link } from "react-router-dom";
-import Card from "../../shared/components/UIElements/Card";
+// import Card from "../../shared/components/UIElements/Card";
+import Card from "react-bootstrap/Card";
 
 export default function UserItem(props) {
   return (
     <li className="user-item">
-      <Card className="user-item__content">
+      <Card>
         <Link to={`/${props.id}/places`}>
           <div className="user-item__image">
             <Avatar image={props.image} alt={props.name} />

@@ -2,6 +2,7 @@
   margin: 1rem;
   width: calc(45% - 2rem);
   min-width: 17.5rem;
+  list-style-type: none;
 }
 
 .user-item a {
@@ -13,6 +14,7 @@
   padding: 1rem;
   color: white;
   background: #292929;
+  border-radius: 10px; /* Adjust the value as needed */
 }
 
 .user-item a:hover,
@@ -47,3 +49,7 @@
 .user-item__info h3 {
   margin: 0;
 }
+
+/* .rounded-card {
+  border-radius: 20px; 
+} */

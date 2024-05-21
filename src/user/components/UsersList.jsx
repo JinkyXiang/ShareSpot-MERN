@@ -1,13 +1,18 @@
 import PropTypes from "prop-types";
 import "./UsersList.css";
 import UserItem from "./UserItem";
+// import Card from "../../shared/components/UIElements/Card";
+import Card from "react-bootstrap/Card";
+import "./UsersList.css";
 
 export default function UsersList(props) {
   if (props.items.length === 0) {
     return (
-      <div className="center">
+      //   <div className="center">
+      <Card className="users-list">
         <h2>No users found.</h2>
-      </div>
+      </Card>
+      //   </div>
     );
   }
 
