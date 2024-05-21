@@ -1,9 +1,7 @@
-// MainNavigation component is a child of MainHeader component, contain links
+// MainNavigation.js
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import React from "react";
-import { useState } from "react";
-
+import React, { useState } from "react";
 import "./MainNavigation.css";
 import MainHeader from "./MainHeader";
 import NavLinks from "./NavLinks";
@@ -23,12 +21,13 @@ export default function MainNavigation() {
 
   return (
     <React.Fragment>
-      {drawerIsOpen ? <Backdrop onClick={closeDrawer} /> : null}
-      {drawerIsOpen ? (
-        <SideDrawer>
+      {drawerIsOpen && <Backdrop onClick={closeDrawer} />}
+      <SideDrawer show={drawerIsOpen} onClick={closeDrawer}>
+        <nav className="main-navigation__drawer-nav">
           <NavLinks />
-        </SideDrawer>
-      ) : null}
+        </nav>
+      </SideDrawer>
+
       <MainHeader>
         <button className="main-navigation__menu-btn" onClick={openDrawer}>
           <span />
